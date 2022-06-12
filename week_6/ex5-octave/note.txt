@@ -1,0 +1,2 @@
+using Regularization to control model while training
+After getting Theta, there is no need to use Regularization to compute the loss

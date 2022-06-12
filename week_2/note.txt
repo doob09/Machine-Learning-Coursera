@@ -1,0 +1,7 @@
+gradient descent : 2 method : vectorization and unvecterization
+https://www.geeksforgeeks.org/vectorization-of-gradient-descent/
+
+https://towardsdatascience.com/vectorization-implementation-in-machine-learning-ca652920c55d
+https://peterroelants.github.io/posts/neural-network-implementation-part04/
+
+sum as internal Product of 2 vector

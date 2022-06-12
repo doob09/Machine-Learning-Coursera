@@ -1,0 +1,1 @@
+for this cost function: no use of dot product inside the double sum
