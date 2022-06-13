@@ -20,9 +20,20 @@ idx = zeros(size(X,1), 1);
 %
 % Note: You can use a for-loop over the examples to compute this.
 %
+[r,c] = size(centroids)
 
+list_result = []
+# get the distances from data points to each centroids
+for j=1:length(X)
+    for i =1:r
+        dist = sum([X(j,:) .- centroids(i,:)].^2);
+        list_result(j,i) = dist;
+    end
+end
 
-
+#get the index of the min value 
+[~,min_idx] = min(list_result');
+idx = min_idx';
 
 
 

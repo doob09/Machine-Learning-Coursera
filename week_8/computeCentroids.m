@@ -26,7 +26,28 @@ centroids = zeros(K, n);
 % Note: You can use a for-loop over the centroids to compute this.
 %
 
+cluster_idx = [];
+cluster_label = [];
 
+[r c] = size(centroids);
+[r_idx c_idx] = size(idx);
+
+#extract data points having same label
+for i = 1:r
+    cluster_label = ones(m,1);
+    cluster_label = cluster_label * i ;
+    cluster_idx = [cluster_idx idx==cluster_label];
+end 
+
+avg_C = []
+for j= 1:r
+    cluster_x = find(cluster_idx(:,j));
+    cluster_x = X(cluster_x,:);
+    avg_cluster = mean(cluster_x);
+    avg_C = [avg_C ; avg_cluster];
+end
+
+centroids = avg_C;
 
 
 
